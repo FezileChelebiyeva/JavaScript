@@ -67,7 +67,7 @@ console.log("10-", selsiFahrenheit(20, 30));
 
 // 11
 function BMI(m, h) {
-  let bmi = m / Math.pow(h, 2);
+  let bmi = Math.round(m / Math.pow(h, 2));
   let result;
   if (bmi < 18.5) {
     result = "az ceki";
@@ -151,7 +151,7 @@ console.log("15- " + reverseArray(array2));
 
 // 16
 let addItem = [3, 4, 5, 7, 9, 8, 6];
-function addElement(arr) {
+function addElement() {
   addItem.push(1);
   return addItem;
 }
@@ -159,12 +159,12 @@ console.log("17- " + addElement(addItem));
 
 // 17
 function showDataTime() {
-  const time = new Date()
+  const time = new Date();
   console.log(time);
 }
 showDataTime();
 
-// 18 uznlugu 5 olanlar
+// // 18 uznlugu 5 olanlar
 const countries = [
   "Afghanistan",
   "Albania",
@@ -347,3 +347,396 @@ function arrayElements(array) {
   return countries2;
 }
 console.log(arrayElements(countries));
+
+// 19 olkeler nece hrf ibrt
+const country = [
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Antigua and Barbuda",
+  "Argentina",
+  "Armenia",
+  "Australia",
+  "Austria",
+  "Azerbaijan",
+  "Bahamas",
+  "Bahrain",
+  "Bangladesh",
+  "Barbados",
+  "Belarus",
+  "Belgium",
+  "Belize",
+  "Benin",
+  "Bhutan",
+  "Bolivia",
+  "Bosnia and Herzegovina",
+  "Botswana",
+  "Brazil",
+  "Brunei",
+  "Bulgaria",
+  "Burkina Faso",
+  "Burundi",
+  "Cambodia",
+  "Cameroon",
+  "Canada",
+  "Cape Verde",
+  "Central African Republic",
+  "Chad",
+  "Chile",
+  "China",
+  "Colombi",
+  "Comoros",
+  "Congo (Brazzaville)",
+  "Congo",
+  "Costa Rica",
+  "Cote d'Ivoire",
+  "Croatia",
+  "Cuba",
+  "Cyprus",
+  "Czech Republic",
+  "Denmark",
+  "Djibouti",
+  "Dominica",
+  "Dominican Republic",
+  "East Timor (Timor Timur)",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Ethiopia",
+  "Fiji",
+  "Finland",
+  "France",
+  "Gabon",
+  "Gambia, The",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Greece",
+  "Grenada",
+  "Guatemala",
+  "Guinea",
+  "Guinea-Bissau",
+  "Guyana",
+  "Haiti",
+  "Honduras",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Jamaica",
+  "Japan",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kiribati",
+  "Korea, North",
+  "Korea, South",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Macedonia",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Marshall Islands",
+  "Mauritania",
+  "Mauritius",
+  "Mexico",
+  "Micronesia",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Morocco",
+  "Mozambique",
+  "Myanmar",
+  "Namibia",
+  "Nauru",
+  "Nepal",
+  "Netherlands",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "Norway",
+  "Oman",
+  "Pakistan",
+  "Palau",
+  "Panama",
+  "Papua New Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Poland",
+  "Portugal",
+  "Qatar",
+  "Romania",
+  "Russia",
+  "Rwanda",
+  "Saint Kitts and Nevis",
+  "Saint Lucia",
+  "Saint Vincent",
+  "Samoa",
+  "San Marino",
+  "Sao Tome and Principe",
+  "Saudi Arabia",
+  "Senegal",
+  "Serbia and Montenegro",
+  "Seychelles",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Solomon Islands",
+  "Somalia",
+  "South Africa",
+  "Spain",
+  "Sri Lanka",
+  "Sudan",
+  "Suriname",
+  "Swaziland",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Taiwan",
+  "Tajikistan",
+];
+
+function countCountryLetter() {
+  for (let i = 0; i < country.length; i++) {
+    console.log(`${country[i]}, ${country[i].length}`);
+  }
+}
+countCountryLetter();
+
+// 20
+const country2 = [
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Antigua and Barbuda",
+  "Argentina",
+  "Armenia",
+  "Australia",
+  "Austria",
+  "Azerbaijan",
+  "Bahamas",
+  "Bahrain",
+  "Bangladesh",
+  "Barbados",
+  "Belarus",
+  "Belgium",
+  "Belize",
+  "Benin",
+  "Bhutan",
+  "Bolivia",
+  "Bosnia and Herzegovina",
+  "Botswana",
+  "Brazil",
+  "Brunei",
+  "Bulgaria",
+  "Burkina Faso",
+  "Burundi",
+  "Cambodia",
+  "Cameroon",
+  "Canada",
+  "Cape Verde",
+  "Central African Republic",
+  "Chad",
+  "Chile",
+  "China",
+  "Colombi",
+  "Comoros",
+  "Congo (Brazzaville)",
+  "Congo",
+  "Costa Rica",
+  "Cote d'Ivoire",
+  "Croatia",
+  "Cuba",
+  "Cyprus",
+  "Czech Republic",
+  "Denmark",
+  "Djibouti",
+  "Dominica",
+  "Dominican Republic",
+  "East Timor (Timor Timur)",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Ethiopia",
+  "Fiji",
+  "Finland",
+  "France",
+  "Gabon",
+  "Gambia, The",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Greece",
+  "Grenada",
+  "Guatemala",
+  "Guinea",
+  "Guinea-Bissau",
+  "Guyana",
+  "Haiti",
+  "Honduras",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Jamaica",
+  "Japan",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kiribati",
+  "Korea, North",
+  "Korea, South",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Macedonia",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Marshall Islands",
+  "Mauritania",
+  "Mauritius",
+  "Mexico",
+  "Micronesia",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Morocco",
+  "Mozambique",
+  "Myanmar",
+  "Namibia",
+  "Nauru",
+  "Nepal",
+  "Netherlands",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "Norway",
+  "Oman",
+  "Pakistan",
+  "Palau",
+  "Panama",
+  "Papua New Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Poland",
+  "Portugal",
+  "Qatar",
+  "Romania",
+  "Russia",
+  "Rwanda",
+  "Saint Kitts and Nevis",
+  "Saint Lucia",
+  "Saint Vincent",
+  "Samoa",
+  "San Marino",
+  "Sao Tome and Principe",
+  "Saudi Arabia",
+  "Senegal",
+  "Serbia and Montenegro",
+  "Seychelles",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Solomon Islands",
+  "Somalia",
+  "South Africa",
+  "Spain",
+  "Sri Lanka",
+  "Sudan",
+  "Suriname",
+  "Swaziland",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Taiwan",
+  "Tajikistan",
+];
+
+function countCountryFirstLetter() {
+  for (let i = 0; i < country2.length; i++) {
+    if (country2[i][0] == "B") {
+      console.log(country[i]);
+    }
+  }
+}
+countCountryFirstLetter();
+
+// 21
+let sampleNews = 
+  "As software developers, the natural tendency is to start developing applications based on your own hands-on experience and knowledge right away. However, overtime issues in the application arise, adaptations to changes, and new features happen.";
+function sampleText() {
+  let count = 0;
+  for (let i = 0; i < sampleNews.length; i++) {
+    if (sampleNews[i] == " ") {
+      count++;
+    }
+  }
+  console.log(count);
+}
+sampleText();
+
+
+// 22
+let sampleNews2 = 
+  "As software developers, the natural tendency is to start developing applications based on your own hands-on experience and knowledge right away. However, overtime issues in the application arise, adaptations to changes, and new features happen.";
+function sampleText2() {
+  let count = 0;
+  for (let i = 0; i < sampleNews2.length; i++) {
+    if (sampleNews2[i] == "," || sampleNews2[i] == ".") {
+      count++;
+    }
+  }
+  console.log(count);
+}
+sampleText2();
