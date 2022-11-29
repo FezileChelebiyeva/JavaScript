@@ -85,17 +85,17 @@ const users = {
 
 // skili boyuk olan
 let array = Object.values(users);
-// console.log(array);
+// // console.log(array);
 let max = 0;
 for (let i = 0; i < array.length; i++) {
   //   console.log(array[i].skills.length);
   if (array[i].skills.length > max) {
     max = array[i].skills.length;
   }
-}
-console.log(max);
+} console.log(max);
 
 let arrName = Object.entries(users);
+console.log(arrName);
 for (let i = 0; i < arrName.length; i++) {
   for (let j = 0; j < arrName[i].length; j++) {
     if (arrName[i][j].skills?.length == max) {
@@ -104,4 +104,14 @@ for (let i = 0; i < arrName.length; i++) {
   }
 }
 
-
+// point 50
+let array1 = Object.entries(users);
+console.log(array);
+for (let i = 0; i < array1.length; i++) {
+  for (let j = 0; j < array1[i].length; j++) {
+    if (array1[i][j].points == 50) {
+      console.log(array1[i][0]);
+      break;
+    }
+  }
+}
