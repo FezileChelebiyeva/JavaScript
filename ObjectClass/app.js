@@ -92,7 +92,8 @@ for (let i = 0; i < array.length; i++) {
   if (array[i].skills.length > max) {
     max = array[i].skills.length;
   }
-} console.log(max);
+}
+console.log(max);
 
 let arrName = Object.entries(users);
 console.log(arrName);
@@ -116,7 +117,13 @@ for (let i = 0; i < array1.length; i++) {
   }
 }
 
-
 // js info
 console.log("Asab" in users);
 console.log("kage" in users.Daniel);
+
+alert(1 / 0);
+alert(`result: ${1 + 2}`);
+alert("Not A Number" / 2);
+alert(Infinity);
+let a = 4 > 1;
+alert(a)
