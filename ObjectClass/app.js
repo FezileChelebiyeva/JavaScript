@@ -115,3 +115,8 @@ for (let i = 0; i < array1.length; i++) {
     }
   }
 }
+
+
+// js info
+console.log("Asab" in users);
+console.log("kage" in users.Daniel);
