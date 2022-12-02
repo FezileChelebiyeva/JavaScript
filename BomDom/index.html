@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 400px;
+        /* height: 200px; */
+        border: 1px solid black;
+      }
+      ul {
+        padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+
+      }
+      li {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: teal;
+        color: white;
+        margin-bottom: 10px;
+      }
+      .btnDiv {
+        display: flex;
+        column-gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Todo App</h2>
+    <input type="text" class="inputEl" />
+
+    <button class="addBtn">Add</button>
+    <button class="deleteBtn">Delete</button>
+    <br /><br />
+    <div class="box">
+      <p id="test" >qeydlerin listi</p>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
