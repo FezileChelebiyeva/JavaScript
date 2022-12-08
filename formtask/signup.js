@@ -15,8 +15,6 @@ form.addEventListener("submit", function (e) {
     allInput[2].value != "" &&
     allInput[3].value != ""
   ) {
-    submitBtn.disabled = false;
-
     let userObject = {
       username: "",
       surname: "",
@@ -28,18 +26,16 @@ form.addEventListener("submit", function (e) {
     userObject.email = allInput[2].value;
     userObject.password = allInput[3].value;
 
-    allUserData.push(userObject);
+
+    allUserData.some((u) => u.email === allInput[2].value)
+      ? alert("you have an account with this email")
+      : allUserData.push(userObject);
+
     localStorage.setItem("userData", JSON.stringify(allUserData));
 
     allInput[0].value = "";
     allInput[1].value = "";
     allInput[2].value = "";
     allInput[3].value = "";
-
-    // allUserData.some((e) => e.email === allInput[2].value)
-    //   ? null
-    //   : allUserData.push(userObject);
-
-    // localStorage.setItem("userData", JSON.stringify(allUserData));
   }
 });
