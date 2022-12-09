@@ -25,7 +25,6 @@ input.addEventListener("keypress", function (event) {
     text.style.border = "1px solid darkblue";
     text.innerText = input.value;
 
-    
     array.push(text.innerText);
 
     localStorage.setItem("movies", JSON.stringify(array));
@@ -36,7 +35,7 @@ input.addEventListener("keypress", function (event) {
       array.forEach((t) => {
         if (input.value === t.innerText) {
           t.remove();
-          t.localStorage.removeItem("movies")
+          t.localStorage.removeItem("movies");
         }
       });
     });

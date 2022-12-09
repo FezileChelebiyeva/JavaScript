@@ -1,0 +1,95 @@
+@import "color";
+@import "reset";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-color;
+  height: 100vh;
+  .page-container {
+    margin: auto;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60rem;
+    border-radius: 1rem;
+
+    .page-container-movies {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 4rem;
+      .page-container-movies-head {
+        h1 {
+          font-size: 2rem;
+          font-weight: 750;
+          margin: 2rem 0;
+        }
+      }
+      .page-container-movies-name {
+        margin: auto 0;
+        p {
+          border-radius: 0.5rem;
+          margin: 0.5rem 0.5rem 0.5rem 0;
+          color: black;
+          background-color: $bg-link-color;
+          border: 0.1rem solid $bg-color;
+          display: inline-block;
+          padding: 0.5rem 1rem;
+          i {
+            color: white;
+            margin-left: 0.5rem;
+          }
+        }
+
+        .activeName {
+          background-color: $bg-color;
+          color: white;
+        }
+      }
+      .page-container-square {
+        position: absolute;
+        background-color: $bg-element-color;
+        width: 3rem;
+        height: 3rem;
+        top: 0;
+      }
+      .page-container-circle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10rem;
+        height: 10rem;
+        border-top: 0;
+        border-left: 2rem solid $bg-element-color;
+        border-right: 0;
+        border-bottom: 2rem solid $bg-element-color;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-left-radius: 100%;
+      }
+    }
+    .page-container-search {
+      background-color: $bg-div-color;
+
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      padding: 4rem;
+      input {
+        border: 0.1rem solid $bg-color;
+        width: 100%;
+        padding: 1.3rem 1.3rem;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}
+
+.activeName {
+  background-color: $bg-color;
+  color: white;
+}
