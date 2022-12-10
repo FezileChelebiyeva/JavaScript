@@ -12,6 +12,10 @@ let bubble;
 let userScore = 0;
 let bubbleInterval;
 
+easyBtn.disabled = true;
+mediumBtn.disabled = true;
+hardBtn.disabled = true;
+
 function createBubble() {
   bubble = document.createElement("button");
   bubble.setAttribute("class", "bubble");
@@ -47,14 +51,9 @@ startBtn.addEventListener("click", function (e) {
   e.preventDefault();
   startBtn.disabled = true;
   stopBtn.disabled = false;
-
-  bubbleInterval = setInterval(function () {
-    createBubble();
-  }, 600);
-
-  document.querySelectorAll(".bubble").forEach((b) => {
-    b.disabled = false;
-  });
+  easyBtn.disabled = false;
+  mediumBtn.disabled = false;
+  hardBtn.disabled = false;
 });
 
 stopBtn.addEventListener("click", function () {
@@ -72,10 +71,10 @@ stopBtn.addEventListener("click", function () {
 
 easyBtn.addEventListener("click", function () {
   easyBtn.disabled = true;
-  hardBtn.disabled = false;
-  mediumBtn.disabled = false;
+  hardBtn.disabled = true;
+  mediumBtn.disabled = true;
   stopBtn.disabled = false;
-  startBtn.disabled = false;
+  startBtn.disabled = true;
 
   bubbleInterval = setInterval(function () {
     createBubble();
@@ -87,34 +86,39 @@ easyBtn.addEventListener("click", function () {
 });
 
 mediumBtn.addEventListener("click", function () {
-  easyBtn.disabled = false;
-  hardBtn.disabled = false;
+  easyBtn.disabled = true;
+  hardBtn.disabled = true;
   mediumBtn.disabled = true;
   stopBtn.disabled = false;
-  startBtn.disabled = false;
-
+  startBtn.disabled = true;
   bubbleInterval = setInterval(function () {
     createBubble();
+    bubble.addEventListener("click", function () {
+      this.remove();
+      userScore += 1;
+      result.innerHTML = `${userScore}`;
+    });
   }, 1000);
 
   document.querySelectorAll(".bubble").forEach((b) => {
     b.disabled = false;
   });
-
-
-    userScore = userScore + 2;
-
 });
 
 hardBtn.addEventListener("click", function () {
-  easyBtn.disabled = false;
-  mediumBtn.disabled = false;
+  easyBtn.disabled = true;
+  mediumBtn.disabled = true;
   hardBtn.disabled = true;
   stopBtn.disabled = false;
-  startBtn.disabled = false;
+  startBtn.disabled = true;
 
   bubbleInterval = setInterval(function () {
     createBubble();
+    bubble.addEventListener("click", function () {
+      this.remove();
+      userScore += 2;
+      result.innerHTML = `${userScore}`;
+    });
   }, 500);
 
   document.querySelectorAll(".bubble").forEach((b) => {
