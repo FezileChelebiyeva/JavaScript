@@ -2275,16 +2275,31 @@ $(".populationBtn").on("click", function (e) {
   countries_data.forEach((element) => (sumPopulation += element.population));
 
   let populatText = `
-<div class="element"><span class='abc'>World</span><span class='grow'></span><span> <span>${sumPopulation}</span></div>
+<div class="element"><span class='abc'>World</span>
+  <div class="diagram">
+    <div class="center">
+      <div style="width: 100%; height: 25px; background: rgb(187, 112, 0)"></div>
+    </div>
+  </div>
+<span class='abc1'>${sumPopulation}</span></div>
 
 `;
   $(".dataSort").append(populatText);
 
   first10.forEach((element) => {
+    let widths = Math.floor((element.population * 100) / sumPopulation);
+
     let populatText = `
-    <div class="element"><span class='abc'>${element.name}</span><span class='grow'></span><span>${element.population}</span></div>
+    <div class="element"><span class='abc'>${element.name}</span>
+    <div class="diagram">
+      <div class="center">
+        <div style="width:${widths}%; height: 25px; background: rgb(187, 112, 0)"></div>
+      </div>
+    </div>
+    <span class='abc1'>${element.population}</span></div>
 
 `;
+
     $(".dataSort").append(populatText);
   });
 });
@@ -2294,11 +2309,27 @@ $(".area").on("click", function (e) {
   $(".dataSort").html("");
   let areaData = countries_data.sort((a, b) => b.area - a.area);
 
+  let sumArea = 0;
+  countries_data.forEach((element) => {
+    element.area && (sumArea += element.area);
+  });
+
+  
+
   let first10Area = areaData.slice(0, 10);
 
   first10Area.forEach((element) => {
+
+    let widths = Math.floor((element.area * 100) / sumArea);
+    
     let areaText = `
-    <div class="element"><span class='abc'>${element.name}</span><span class='grow'></span><span>${element.area}</span></div>
+    <div class="element"><span class='abc'>${element.name}</span>
+    <div class="diagram">
+      <div class="center">
+        <div style="width:${widths}%; height: 25px; background: rgb(187, 112, 0)"></div>
+      </div>
+    </div>
+    <span>${element.area}</span></div>
 
 `;
     $(".dataSort").append(areaText);

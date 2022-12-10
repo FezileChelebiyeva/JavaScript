@@ -3,43 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=
-    , initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .abc{
-            display: inline-block;
-            width: 220px;
-        }
-        .grow{
-            display: inline-block;
-            width: 600px;
-            background-color: rgb(182, 110, 16);
-            margin: 3px;
-        }
-        h1{
-            color: rgb(187, 112, 0);
-            letter-spacing: 3px;
-        }
-        p{
-            color: rgb(135, 136, 136);
-        }
-        .element{
-            display: flex;
-            justify-content: space-between;
-            color: rgb(53, 53, 53);
-            line-height: 35px;
-            font-weight: 600;
-        }
+      .diagram {
+        width: 100%;
+      }
+      .abc {
+        width: 200px;
+      }
+      .abc1 {
+        width: 150px;
+      }
+      h1 {
+        color: rgb(187, 112, 0);
+        letter-spacing: 3px;
+      }
+      p {
+        color: rgb(135, 136, 136);
+      }
+      .element {
+        display: flex;
+        justify-content: space-between;
+        color: rgb(53, 53, 53);
+        line-height: 35px;
+        font-weight: 600;
+      }
       .container {
         border: 1px solid rgb(192, 192, 192);
         text-align: center;
         margin: 5%;
         padding: 1% 5%;
+        box-sizing: border-box;
       }
-      button{
+      button {
         cursor: pointer;
         height: 25px;
         padding: 6px 10px;
@@ -63,9 +59,7 @@
         <button class="area">AREA</button>
         <p class="text"></p>
       </div>
-      <div class="dataSort">
-
-      </div>
+      <div class="dataSort"></div>
     </div>
 
     <script
