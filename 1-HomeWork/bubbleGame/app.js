@@ -11,7 +11,8 @@ let hardBtn = document.querySelector("#hardBtn");
 let bubble;
 let userScore = 0;
 let bubbleInterval;
-
+let username;
+let userName;
 easyBtn.disabled = true;
 mediumBtn.disabled = true;
 hardBtn.disabled = true;
@@ -21,11 +22,17 @@ function createBubble() {
   bubble.setAttribute("class", "bubble");
   leftPos = Math.floor(Math.random() * (95 - 1) + 1);
   topPos = Math.floor(Math.random() * (95 - 1) + 1);
+
+  red = Math.floor(Math.random() * 256);
+  green = Math.floor(Math.random() * 256);
+  blue = Math.floor(Math.random() * 256);
+
   bubble.style.width = "25px";
   bubble.style.height = "25px";
   bubble.style.borderRadius = "50%";
-  bubble.style.backgroundColor = "darkblue";
-  bubble.style.border = "2px solid black";
+  bubble.style.border = "0";
+  bubble.style.boxShadow = `0px 0px 6px 1px rgb(${red}, ${green}, ${blue}`;
+  bubble.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
   bubble.style.cursor = "pointer";
   bubble.style.position = "absolute";
   bubble.style.left = `${leftPos}%`;
@@ -35,7 +42,7 @@ function createBubble() {
 
   if (document.querySelectorAll(".bubble").length == 40) {
     clearInterval(bubbleInterval);
-    if (confirm(`Game Over!! Your score is ${userScore}`)) {
+    if (confirm(` ${userName} game over! your score is ${userScore}`)) {
       resetGame();
     }
   }
@@ -54,6 +61,15 @@ startBtn.addEventListener("click", function (e) {
   easyBtn.disabled = false;
   mediumBtn.disabled = false;
   hardBtn.disabled = false;
+
+  userName = prompt("your name");
+
+  username = document.createElement("p");
+
+  username.innerText = userName;
+  username.style.cssText =
+    " font-size:18px; font-weight: 800; letter-spacing: 2px; color: teal;";
+  document.querySelector(".text-center").prepend(username);
 });
 
 stopBtn.addEventListener("click", function () {
@@ -134,8 +150,9 @@ function resetGame() {
   easyBtn.disabled = false;
   mediumBtn.disabled = false;
   hardBtn.disabled = false;
+  userScore = 0;
   clearInterval(bubbleInterval);
   box.innerHTML = "";
-  userScore = 0;
   result.innerText = userScore;
+  username.remove();
 }
