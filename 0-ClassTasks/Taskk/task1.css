@@ -1,0 +1,185 @@
+body {
+  background-color: rgba(0, 0, 0, 0.952);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 300px;
+  height: 600px;
+  background-color: white;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 17px;
+}
+
+.div1 {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(238, 159, 12);
+  border-radius: 17px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  position: relative;
+}
+
+.div2 {
+  width: 100%;
+  height: 350px;
+  background-color: rgb(231, 231, 229);
+  border-radius: 17px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.img {
+  margin-top: 38px;
+  padding-left: 20px;
+  width: 90px;
+  height: 25px;
+}
+
+.img1 {
+  padding-top: 15px;
+  padding-left: 20px;
+  width: 340px;
+  height: 340px;
+  position: absolute;
+  top: -35px;
+  right: -90px;
+}
+
+.parag {
+  color: white;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.text {
+  width: 200px;
+  color: white;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.text1 {
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 10px;
+}
+
+.div-parag {
+  display: flex;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.new {
+  width: 35px;
+  height: 15px;
+  background-color: green;
+  color: white;
+  font-size: 9px;
+  text-align: center;
+  padding: 3px;
+  margin-left: 15px;
+  border-radius: 5px;
+}
+
+.star {
+  font-size: 10px;
+  padding-top: 8px;
+  padding-left: 20px;
+}
+.five {
+  opacity: 0.3;
+}
+.size {
+  padding-left: 20px;
+  margin-top: 35px;
+  font-weight: 550;
+}
+
+.count {
+  margin-top: 15px;
+  padding-left: 20px;
+  word-spacing: 15px;
+  font-size: 15px;
+}
+
+
+/* .count9 {
+  border-radius: 50%;
+  background-color: green;
+  letter-spacing: 0;
+  color: white;
+  padding: 1px 5px;
+} */
+
+.color {
+  padding-left: 20px;
+  padding-top: 25px;
+  font-weight: 600;
+}
+.number{
+    border: 0;
+}
+.circle {
+  display: flex;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.circle1 {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: rgb(2, 2, 124);
+  border: 0;
+
+}
+
+.circle2 {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: rgb(95, 2, 2);
+  margin-left: 6px;
+  border: 0;
+
+}
+
+.usd {
+  width: 120px;
+  height: 40px;
+  background-color: rgb(2, 2, 124);
+  margin-left: 200px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.btnBtn {
+    text-align: center;
+}
+.btn {
+  margin-top: 15px;
+  color: white;
+  padding: 8px;
+  font-size: 12px;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btnAdd{
+    background-color: rgb(1, 1, 129);
+}
+.btnOrder{
+background-color: rgb(223, 134, 0);
+}
+.btnClear{
+background-color: brown;
+}
