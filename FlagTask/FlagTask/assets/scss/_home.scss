@@ -1,0 +1,125 @@
+body {
+  background-color: hsl(0, 0%, 98%);
+  .container {
+    position: relative;
+    .info {
+      display: flex;
+      position: absolute;
+      left: 50%;
+      top: 2%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      background-color: hsl(0, 0%, 98%);
+    }
+    header {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      button {
+        border: 0;
+        background-color: transparent;
+      }
+    }
+    form {
+      margin-top: 100px;
+      display: flex;
+      justify-content: space-around;
+      .dropdown {
+        button {
+          background-color: white;
+          color: black;
+        }
+      }
+      #search {
+        border-radius: 5px;
+        border: 2px solid black;
+        padding: 5px 10px;
+        width: 30%;
+        outline: 0;
+      }
+    }
+    .row {
+      margin-top: 100px;
+      .col-3 {
+        .card {
+          .card-body {
+            p {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.dark-mode {
+    background-color: hsl(207, 26%, 17%);
+    color: white;
+
+    .card {
+      background-color: hsl(209, 23%, 22%);
+      color: white;
+    }
+
+    header {
+      background-color: hsl(209, 23%, 22%);
+      color: white;
+    }
+    button {
+      background-color: hsl(209, 23%, 22%);
+      color: white;
+    }
+    input {
+      background-color: hsl(209, 23%, 22%);
+      color: white;
+    }
+    form .dropdown button {
+      background-color: hsl(209, 23%, 22%);
+      color: white;
+    }
+    form .dropdown ul {
+      background-color: hsl(209, 23%, 22%);
+      //   color: white;
+    }
+    form .dropdown ul li a {
+      background-color: hsl(209, 23%, 22%);
+      color: white;
+    }
+  }
+}
+// .flags{
+//     display: block;
+// }
+// .flagIn {
+//     display: none;
+// }
+
+@media only screen and (max-width: 992px) {
+  .row {
+    flex-wrap:wrap;
+  }
+  
+  
+}
+@media only screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 60px;
+  }
+  .card{
+    width: 200px;
+  }
+  .card-img-top {
+    width: 100%;
+    height: 70px;
+  }
+}
+
+.text {
+    margin-top: 80px;
+    display: flex;
+   justify-content: space-around;
+}
