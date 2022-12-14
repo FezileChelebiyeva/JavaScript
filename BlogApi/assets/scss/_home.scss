@@ -1,0 +1,46 @@
+body {
+  .container {
+    padding: 0 20%;
+    header {
+      margin-bottom: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      ul {
+        display: flex;
+        column-gap: 20px;
+        li {
+          list-style: none;
+        }
+      }
+    }
+    .div {
+      .card {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid rgb(234, 234, 235);
+        button {
+          text-align: center;
+          background-color: rgb(134, 9, 9);
+          color: white;
+          font-size: 11px;
+          border: 0;
+          border-radius: 8px;
+          padding: 8px 10px;
+          cursor: pointer;
+        }
+        .title {
+          color: rgb(4, 12, 41);
+        }
+        .body {
+          color: rgb(134, 9, 9);
+        }
+        .author {
+          color: rgb(87, 85, 85);
+        }
+      }
+    }
+  }
+}

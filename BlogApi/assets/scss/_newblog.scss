@@ -1,0 +1,53 @@
+body {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(163, 13, 13);
+    ul {
+      display: flex;
+      column-gap: 20px;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: rgb(53, 52, 52);
+        }
+      }
+    }
+  }
+  form {
+    color: rgb(53, 52, 52);
+    h3 {
+      text-align: center;
+      color: rgb(163, 13, 13);
+    }
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      width: 300px;
+      height: 20px;
+      border: 1px solid rgb(199, 198, 198);
+    }
+    textarea {
+      border: 1px solid rgb(199, 198, 198);
+    }
+    select {
+      width: 310px;
+      height: 30px;
+      border: 1px solid rgb(199, 198, 198);
+    }
+    button {
+      text-align: center;
+      background-color: rgb(163, 13, 13);
+      color: white;
+      font-size: 11px;
+      border: 0;
+      border-radius: 10px;
+      padding: 8px 10px;
+    }
+  }
+}
