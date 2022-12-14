@@ -13,10 +13,16 @@
         padding: 5px 10px;
         color: rgb(3, 3, 83);
       }
-      table{
-        margin: 0 auto;
-      }
+
       .deleteBtn {
+        background-color: rgb(136, 8, 8);
+        color: white;
+        border: 0;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      .editBtn {
         background-color: rgb(3, 65, 3);
         color: white;
         border: 0;
@@ -24,30 +30,62 @@
         padding: 5px 10px;
         cursor: pointer;
       }
-      .editBtn{
-        background-color: brown;
+      .submitBtn {
+        background-color: rgb(61, 87, 207);
         color: white;
         border: 0;
         border-radius: 5px;
-        padding: 5px 10px;
+        padding: 8px 10px;
         cursor: pointer;
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      h2 {
+        color: rgb(185, 4, 4);
+      }
+      .form {
+        margin-top: 100px;
+        text-align: center;
+      }
+      input {
+        margin-top: 10px;
+        width: 300px;
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid rgb(207, 207, 207);
+        padding: 5px 10px;
       }
     </style>
   </head>
   <body>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Company Name</th>
-          <th>Contact Name</th>
-          <th>Contact Title</th>
-          <th>Delete</th>
-          <th>Edit</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Company Name</th>
+            <th>Contact Name</th>
+            <th>Contact Title</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <form class="form">
+        <h2>Form For Edit Table</h2>
+        <label for="companyName">Company Name</label><br />
+        <input type="text" name="companyName" id="companyName" /><br /><br />
+        <label for="contactName">Contact Name</label><br />
+        <input type="text" name="contactName" id="contactName" /><br /><br />
+        <label for="contactTitle">Contact Title</label><br />
+        <input type="text" name="contactTitle" id="contactTitle" /><br /><br />
+        <button class="submitBtn">Submit</button>
+      </form>
+    </div>
 
     <script src="app.js"></script>
   </body>
