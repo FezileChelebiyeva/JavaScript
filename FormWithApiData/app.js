@@ -12,22 +12,40 @@ form.addEventListener("submit", function (e) {
     email: allInput[2].value,
     password: allInput[3].value,
   };
+  // post
+  // function postNewCustomer(obj) {
+  //   fetch(`${BASE_URL}`, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(obj),
+  //   });
+  // }
+  // postNewCustomer(customerObj);
 
-  function postNewCustomer(obj) {
-    fetch(`${BASE_URL}`, {
-      method: "POST",
+
+// put
+  function updateWPutCustomers(obj, id) {
+    fetch(`${BASE_URL}/${id}`, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(obj),
     });
   }
-  postNewCustomer(customerObj);
+  updateWPutCustomers(customerObj, "WOLZA");
+
 });
 
+
+
+
+// delete
 function deleteCustomer(id) {
     fetch(`${BASE_URL}/${id}`, {
       method: "DELETE"
     });
   }
-deleteCustomer("g4E0ay8")
+// deleteCustomer("n9agV8D")
