@@ -5,6 +5,8 @@ let contName = document.querySelector("#contactName");
 let contTitle = document.querySelector("#contactTitle");
 let submitBtn = document.querySelector(".submitBtn");
 
+let editedElementId;
+
 function usersData() {
   fetch(`${BASE_URL}`)
     .then((response) => response.json())
@@ -33,8 +35,6 @@ function usersData() {
         });
       });
 
-      let editedElementId;
-
       let editBtn = document.querySelectorAll(".editBtn");
       editBtn.forEach((element) => {
         element.addEventListener("click", function (e) {
@@ -49,26 +49,31 @@ function usersData() {
             });
         });
       });
-
-      submitBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        let putObj = {
-          companyName: compName.value,
-          contactName: contName.value,
-          contactTitle: contTitle.value,
-        };
-        console.log(putObj);
-
-        fetch(`https://northwind.vercel.app/api/suppliers/${editedElementId}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(putObj),
-        });
-        usersData();
-      });
     });
 }
 usersData();
+
+submitBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  let putObj = {
+    companyName: compName.value,
+    contactName: contName.value,
+    contactTitle: contTitle.value,
+  };
+  console.log(putObj);
+
+  fetch(`https://northwind.vercel.app/api/suppliers/${editedElementId}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(putObj),
+  }).then((response)=> {
+    console.log(response);
+    tbody.innerHTML = "";
+    usersData()
+  })
+});
+
+
